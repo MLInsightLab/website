@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ML Insight Lab - Your AI, Your Rules</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <img src="mlil_icon.png" alt="ML Insight Lab logo" />
+                </div>
+                <div class="logo">ML Insight Lab</div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your <span class="rotating-text">
+                <span>AI</span>
+                <span>Experiments</span>
+                <span>Simulations</span>
+                <span>Analytics</span>
+            </span>, Your Rules</h1>
+            
+            <p class="subtitle">
+                The turnkey, open-source MLOps platform that takes you from <strong>git&nbsp;clone</strong> to
+                <strong>production-ready model endpoint</strong> in under five minutes—no cloud lock-in, no
+                licensing fees, complete control over your AI destiny.
+            </p>
+
+            <div style="margin: 2rem 0;">
+                <div class="quick-stat">
+                    <strong>5 min</strong>
+                    <span>Setup Time</span>
+                </div>
+                <div class="quick-stat tooltip">
+                    <strong>70%</strong>
+                    <span>Cost Reduction</span>
+                    <div class="tooltiptext">As compared to leading proprietary data science platforms</div>
+                </div>
+                <div class="quick-stat">
+                    <strong>100%</strong>
+                    <span>Your Control</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://github.com/mlinsightlab" class="btn btn-primary hero-cta">Try for Free&nbsp;Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h3>Deploy Anywhere</h3>
+                <p>From laptops to air-gapped servers to cloud infrastructure - your platform runs wherever you need it.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast Setup</h3>
+                <p>Get a fully-integrated MLOps environment running in under 5 minutes with simple Docker Compose.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔓</div>
+                <h3>True Ownership</h3>
+                <p>No vendor lock-in, no black boxes. You own your data, models, and infrastructure completely.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props Section -->
+    <section class="value-props">
+        <div class="value-props-container">
+            <h2>Why ML Insight Lab?</h2>
+            
+            <div class="props-grid">
+                <div class="prop-item">
+                    <h4>Break Free from Vendor Lock-in</h4>
+                    <p>Unlike Databricks or Vertex AI, deploy on any infrastructure you choose. Your models, your rules.</p>
+                </div>
+                
+                <div class="prop-item">
+                    <h4>Predictable Costs, Dramatic Savings</h4>
+                    <p>Eliminate licensing fees entirely. Pay only for the infrastructure you use.</p>
+                </div>
+                
+                <div class="prop-item">
+                    <h4>From Experiment to Production in Minutes</h4>
+                    <p>Pre-configured MLOps utilities and one-click model serving accelerate your entire ML lifecycle.</p>
+                </div>
+                <div class="prop-item">
+                    <h4>Open Source Transparency</h4>
+                    <p>100% open source codebase—no black boxes and a growing community continually improves the platform.</p>
+                </div>
+
+                <div class="prop-item">
+                    <h4>Built by Data Scientists, for Data Scientists</h4>
+                    <p>Intuitive, Python-native workflows with Jupyter, MLflow, and Dask pre-integrated so you stay focused on insights, not infrastructure.</p>
+                </div>
+
+                <div class="prop-item">
+                    <h4>Secure & Air-Gapped Ready</h4>
+                    <p>Deploy confidently inside regulated or disconnected environments—your data never leaves your infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Edge Section -->
+    <section class="competitive-edge">
+        <div class="value-props-container">
+            <h2>The ML Insight Lab Advantage</h2>
+            <ul class="edge-list">
+                <li><strong>Deploy Anywhere in Minutes:</strong> Drop-in Docker Compose gets you a full MLOps stack in ≈5 minutes—no Kubernetes expertise required.</li>
+                <li><strong>Zero Licensing Fees:</strong> 100 % open-source architecture means you only pay for the compute you choose, typically saving 60-70 % compared with proprietary platforms.</li>
+                <li><strong>Total Ownership & Security:</strong> Keep your models and data safely inside your own infrastructure, including air-gapped and regulated environments.</li>
+                <li><strong>Data-Scientist-First Design:</strong> JupyterHub, MLflow, Dask, and an API Hub come pre-integrated so you can go from notebook to production endpoint in a single command.</li>
+                <li><strong>Modular & Extensible:</strong> Enable only the components you need, customize everything, and avoid the bloat of one-size-fits-all enterprise suites.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ML Insight Lab. Open Source. Built with ❤️ by data scientists, for data scientists.</p>
+        <!--
+        <p style="margin-top: 0.75rem; font-size: 0.9rem;">
+           <a href="1_pager_general.pdf" style="color: var(--white); text-decoration: underline;" download>Download the PDF Overview</a>
+            &nbsp;|&nbsp;
+            <a href="mailto:hello@mlinsightlab.com" style="color: var(--white); text-decoration: underline;">Contact&nbsp;Us</a>
+        </p>
+        -->
+    </footer>
+
+    <script>
+        // Synchronize rotating-text container width precisely with word animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.rotating-text');
+            if (!container) return;
+
+            const words = Array.from(container.querySelectorAll('span'));
+
+            // Measure and store each word's width once
+            const wordWidths = new Map();
+            words.forEach(word => {
+                const originalOpacity = word.style.opacity;
+                word.style.opacity = '1';
+                const w = word.getBoundingClientRect().width;
+                word.style.opacity = originalOpacity;
+                wordWidths.set(word, w);
+
+                // Set initial width using the first word in flow
+                if (word === words[0]) {
+                    container.style.width = w + 'px';
+                }
+
+                // Adjust width at the exact frame the word becomes active
+                const syncWidth = () => {
+                    container.style.width = w + 'px';
+                };
+                word.addEventListener('animationstart', syncWidth);
+                word.addEventListener('animationiteration', syncWidth);
+            });
+        });
+    </script>
+</body>
+</html> 
